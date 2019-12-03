@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Send image</title>
+  <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'form_style.css' %}">
+  <script src="{% static 'img_post.js' %}"></script>
+
+</head>
+<body>
+  <main>
+    <div id="title" class="container">
+        <div id="#frame" class="jumbotron body-content">
+            <h1 class="display-4">Automatic Skin Cancer Classifier</h1>
+            <div class="card">
+              <div class="card-body bg-white rounded">
+                <h2>Upload image</h2>
+                <form class="form-signin" id="form-submit" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  <button class="btn btn-lg btn-primary btn-block" id='btnsubmit' type="submit">Send</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    </div>
+      
+
+      <div  class="container d-flex text-center justify-content-center" >
+        <div id="result-div" class="card" hidden>
+          <div class="card-body  bg-white rounded">
+            <div class="row" id="image-body">
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </main>
+</body>
+</html>

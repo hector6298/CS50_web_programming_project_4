@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	
+	<title>Landing site</title>
+
+	
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    {% load static %}
+	<link href="{% static 'cover.css' %}" type="text/css" rel="stylesheet"> 
+</head>
+	<body class="text-center">
+		<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+			<header class="masthead mb-auto">
+				<div class="inner">
+				<h3 class="masthead-brand">ADoctor</h3>
+				<nav class="nav nav-masthead justify-content-center">
+					<a class="nav-link active" href="#">Home</a>
+				</nav>
+				</div>
+			</header>
+			
+			<main role="main" id="lp-box" class=" jumbotron inner cover">
+					<h1 class="cover-heading">Welcome to Automatic Doctor!</h1>
+					<p class="lead">Login to start using our diagnosing tools, or signup to out platform.</p>
+					<p class="lead">
+						<a href="{% url 'login' %}}" class="btn btn-lg btn-info">Login</a>
+						<a href="{% url 'signup' %}" class="btn btn-lg btn-danger">Sign Up</a>
+					</p>
+			</main>
+			
+		</div>
+	</body>
+	</html>
+	
+
+
